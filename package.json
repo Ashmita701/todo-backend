@@ -7,7 +7,6 @@
     "services/user-service"
   ],
   "scripts": {
-    "install": "npm install --workspaces",
-    "start": "docker-compose up --build -d"
+    "start": "docker compose down && docker-compose up --build -d"
   }
 }
