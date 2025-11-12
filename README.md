@@ -47,11 +47,6 @@ Build and start all services together:
 npm run start
 ```
 
-Or directly:
-
-```bash
-docker-compose up --build -d
-```
 
 Once running:
 - **Gateway** → `http://localhost:4000`
@@ -85,18 +80,5 @@ You can run commands from the root using npm workspace scripts:
 ---
 
 
-## 🧩 Example Commands
-
-**Install all dependencies**
-```bash
-npm install
-```
-
-**Start everything via Docker**
-```bash
-docker-compose up --build -d
-```
-
----
 
 
