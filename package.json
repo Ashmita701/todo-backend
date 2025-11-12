@@ -1,0 +1,13 @@
+{
+  "name": "todo-backend",
+  "private": true,
+  "workspaces": [
+    "services/gateway",
+    "services/todo-service",
+    "services/user-service"
+  ],
+  "scripts": {
+    "install": "npm install --workspaces",
+    "start": "docker-compose up --build -d"
+  }
+}
