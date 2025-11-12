@@ -18,7 +18,7 @@ This repository contains a microservices-based **Todo Backend** built using **No
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/todo-backend.git
+git clone https://github.com/Ashmita701/todo-backend.git
 cd todo-backend
 ```
 
