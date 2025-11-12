@@ -1,36 +1,7 @@
 # 🧩 TODO Backend — Microservices with Docker & npm Workspaces
 
-This repository contains a microservices-based **Todo Backend** built using **Node.js**, **Express**, and **MongoDB**, containerized with **Docker** and managed as a **monorepo** using npm Workspaces.
+This repository contains a microservices-based **Todo Backend** built using **Node.js**, **Express**, and **MongoDB**, containerized with **Docker** and **GraphQl**
 
----
-
-## 📁 Folder Structure
-
-```
-TODO-BACKEND/
-│
-├── services/
-│   ├── gateway/          # API Gateway (entry point for all services)
-│   │   ├── src/
-│   │   ├── Dockerfile
-│   │   ├── package.json
-│   │   └── .env
-│   │
-│   ├── todo-service/     # Handles todo CRUD operations
-│   │   ├── src/
-│   │   ├── Dockerfile
-│   │   ├── package.json
-│   │   └── .env
-│   │
-│   └── user-service/     # Handles user management and authentication
-│       ├── src/
-│       ├── Dockerfile
-│       ├── package.json
-│       └── .env
-│
-├── docker-compose.yml     # Docker Compose file to orchestrate all services
-└── package.json           # Root package.json (workspace + scripts)
-```
 
 ---
 
@@ -38,8 +9,6 @@ TODO-BACKEND/
 
 - 🧱 **Microservices Architecture**
 - 🐳 **Dockerized Services**
-- 🔗 **npm Workspaces for dependency management**
-- 🧩 **Modular and Scalable project structure**
 - 🧠 **Supports MongoDB for data persistence**
 
 ---
@@ -70,27 +39,12 @@ npm install
 
 ---
 
-### 3. Environment Setup
-
-Each service has its own `.env` file for environment variables.
-
-Example (`services/todo-service/.env`):
-
-```
-PORT=4001
-MONGO_URI=mongodb://mongo:27017/todos
-```
-
-> Make sure you update `.env` files according to your local or Docker setup.
-
----
-
-### 4. Run Using Docker Compose
+### 3. Run Using Docker Compose
 
 Build and start all services together:
 
 ```bash
-npm run start:all
+npm run start
 ```
 
 Or directly:
@@ -113,17 +67,8 @@ You can run commands from the root using npm workspace scripts:
 
 | Command | Description |
 |----------|-------------|
-| `npm run install:all` | Installs dependencies for all services |
-| `npm run dev:gateway` | Runs the gateway service in dev mode |
-| `npm run dev:todo` | Runs the todo service in dev mode |
-| `npm run dev:user` | Runs the user service in dev mode |
-| `npm run start:all` | Starts all services using Docker Compose |
-
-Example:
-
-```bash
-npm run dev:gateway
-```
+| `npm run install` | Installs dependencies for all services |
+| `npm run start` | Starts all services using Docker Compose |
 
 ---
 
@@ -134,9 +79,9 @@ npm run dev:gateway
 | API Gateway | Express.js |
 | Microservices | Node.js, Express.js |
 | Database | MongoDB |
-| Containerization | Docker, Docker Compose |
-| Package Management | npm Workspaces |
-| Authentication | JWT / Passport (optional, depending on setup) |
+| Docker, Docker Compose |
+| Authentication | JWT  |
+| Graphql |
 
 ---
 
@@ -169,20 +114,4 @@ docker-compose up --build
 
 ---
 
-## 🧑‍💻 Contributing
 
-1. Fork the repository
-2. Create a new branch (`feature/your-feature-name`)
-3. Commit your changes
-4. Push and create a pull request
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
-**Author:** Ashmita Gorkhali  
-**Stack:** Node.js • Express • MongoDB • Docker • npm Workspaces
